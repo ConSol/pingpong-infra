@@ -9,4 +9,4 @@ spec:
         - name: main
           env:
             - name: REPORTER_BASE_URL
-              value: http://reporter-app:80
+              value: http://reporter-app:80/reports
