@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: main
-          image: 238356400807.dkr.ecr.eu-central-1.amazonaws.com/ping:d6ff204
+          image: 238356400807.dkr.ecr.eu-central-1.amazonaws.com/ping:507f3fb
