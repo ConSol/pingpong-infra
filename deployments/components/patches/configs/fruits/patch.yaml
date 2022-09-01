@@ -8,5 +8,5 @@ spec:
       containers:
         - name: main
           env:
-            - name: FRUITS_BASE_URL
+            - name: FRUIT_BASE_URL
               value: https://www.fruityvice.com/api/fruit/all
