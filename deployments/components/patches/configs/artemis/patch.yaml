@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  template:
+    spec:
+      containers:
+        - name: main
+          env:
+            - name: ARTEMIS_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: artemis-configuration
+                  key: ARTEMIS_URL
+            - name: ARTEMIS_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: artemis-credentials
+                  key: ARTEMIS_USERNAME
+            - name: ARTEMIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: artemis-credentials
+                  key: ARTEMIS_PASSWORD

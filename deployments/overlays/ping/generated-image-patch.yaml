@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: main
+          image: 238356400807.dkr.ecr.eu-central-1.amazonaws.com/ping:f3d1fcb

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: artemis
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: artemis
+          # 2.6.3
+          image: vromero/activemq-artemis@sha256:efd0c7ed7b43582b51c77d20fa94a3fef2e79ca444f6b2dfce7c32df31d32c37
+          ports:
+            - containerPort: 8161
+            - containerPort: 61616
+            - containerPort: 5672
+          env:
+            - name: ENABLE_JMX
+              value: 'true'
+            - name: JMX_RMI_PORT
+              value: '1198'
+            - name: JMX_PORT
+              value: '1199'
+          envFrom:
+            - secretRef:
+                name: artemis-credentials
+          volumeMounts:
+            - mountPath: /var/lib/artemis/etc-override/
+              name: broker-config-mount
+      volumes:
+        - name: broker-config-mount
+          configMap:
+            name: artemis-broker-config
