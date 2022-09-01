@@ -12,9 +12,5 @@ spec:
             - containerPort: 8080
           env:
             - name: spring_profiles_active
-              value: prod
-            - name: APP_NAME
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.labels['app.kubernetes.io/name']
+              value: prod,json-logging
           envFrom: []

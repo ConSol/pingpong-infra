@@ -3,9 +3,10 @@ kind: Deployment
 metadata:
   name: app
 spec:
-  replicas: 1
   template:
     spec:
       containers:
         - name: main
-          image: 238356400807.dkr.ecr.eu-central-1.amazonaws.com/pong:bc76380
+          env:
+            - name: FRUITS_BASE_URL
+              value: https://www.fruityvice.com/api/fruit/all

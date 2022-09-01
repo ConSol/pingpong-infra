@@ -6,6 +6,7 @@ resources:
 
 components:
   - ../../components/patches/configs/postgres
+  - ../../components/patches/configs/fruits
 
 patchesStrategicMerge:
   - generated-image-patch.yaml

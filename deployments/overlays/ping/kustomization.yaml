@@ -7,6 +7,7 @@ resources:
 components:
   - ../../components/patches/configs/artemis
   - ../../components/patches/configs/kafka
+  - ../../components/patches/configs/reporter
 
 patchesStrategicMerge:
   - generated-image-patch.yaml
