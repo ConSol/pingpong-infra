@@ -8,6 +8,7 @@ components:
   - ../../components/patches/configs/artemis
   - ../../components/patches/configs/kafka
   - ../../components/patches/configs/reporter
+  - ../../components/patches/health/spring-boot
 
 patchesStrategicMerge:
   - generated-image-patch.yaml
