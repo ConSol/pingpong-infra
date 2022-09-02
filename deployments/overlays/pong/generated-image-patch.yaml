@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: main
-          image: 238356400807.dkr.ecr.eu-central-1.amazonaws.com/pong:507f3fb
+          image: 238356400807.dkr.ecr.eu-central-1.amazonaws.com/pong:e50a030
