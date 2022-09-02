@@ -11,9 +11,9 @@ configMapGenerator:
       - broker-00.xml
   - name: artemis-configuration
     literals:
-      - ARTEMIS_HOST=artemis.pingpong.svc
+      - ARTEMIS_HOST=artemis
       - ARTEMIS_PORT=61616
-      - ARTEMIS_URL=tcp://artemis.pingpong.svc:61616
+      - ARTEMIS_URL=tcp://artemis:61616
 
 secretGenerator:
   - name: artemis-credentials
