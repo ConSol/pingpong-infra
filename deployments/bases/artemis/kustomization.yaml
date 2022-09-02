@@ -28,5 +28,4 @@ commonLabels:
   app.kubernetes.io/name: artemis
   app.kubernetes.io/version: 2.16.0
   app.kubernetes.io/component: messaging
-  app.kubernetes.io/managed-by: ArgoCD
-  app.kubernetes.io/created-by: ArgoCD
+  service: artemis

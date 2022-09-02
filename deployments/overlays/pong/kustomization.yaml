@@ -27,3 +27,4 @@ commonLabels:
   app.kubernetes.io/name: pong
   app.kubernetes.io/version: '1.0'
   app.kubernetes.io/component: pingpong
+  service: pong-app
